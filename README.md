@@ -31,4 +31,4 @@ I'm proud to have achieved the following: <br>
 # Reflections <br>
 I believe in continuous improvement and learning from failures. I constantly reflect on my experiences and use them to improve my skills and knowledge. I'm excited to share my projects and experiences with the GitHub community and learn from others.
 
-Thanks for stopping by and feel free to reach out to me if you have any questions or want to collaborate on a project!
+If you're interested in learning more about my skills and experience, feel free to check out my  [my CV](https://drive.google.com/file/d/14KWNE-qZN_fFykdpCqPdniKqvXIX23m2/view?usp=sharing). I'm always open to new opportunities and collaborations, so don't hesitate to get in touch!
