@@ -19,9 +19,9 @@ I have experience working as a Personal Assistant at a shipping company where I 
 # Projects <br>
 Here are some of the projects I've worked on: <br>
 
+* [Tinyshell](https://github.com/UchihaShaco/Tinyshell) <br>
+* [Philosophers](https://github.com/UchihaShaco/philosophers) <br>
 * [Push swap](https://github.com/UchihaShaco/Push_swap) <br>
-* [Minitalk](https://github.com/UchihaShaco/tinytalk) <br>
-* [So_long](https://github.com/UchihaShaco/so_long) <br>
 # Achievements <br>
 I'm proud to have achieved the following: <br>
 
