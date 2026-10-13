@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Jafar Alwaheidi, software engineer, 42 Abu Dhabi">
+  <!-- Blueprint identity: ink drafting paper, brass + teal annotations, schematic that draws itself in. -->
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1c31"/>
+      <stop offset="1" stop-color="#0a1527"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.45"/>
+    </radialGradient>
+    <pattern id="minor" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M10 0H0V10" fill="none" stroke="#7aa0cf" stroke-opacity="0.07" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="major" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#7aa0cf" stroke-opacity="0.16" stroke-width="0.8"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="sheet"><rect width="1200" height="420" rx="14"/></clipPath>
+    <path id="p-c2n" d="M770 198 H820"/>
+    <path id="p-n2a" d="M940 198 H990"/>
+    <path id="p-a2d" d="M1045 226 V276"/>
+    <path id="p-back" d="M1045 276 V226 M990 198 H940 M820 198 H770"/>
+    <style>
+      .sans { font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", Arial, sans-serif; }
+      .mono { font-family: "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, "Liberation Mono", monospace; }
+      .draw { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw 1.6s cubic-bezier(.4,0,.2,1) forwards; }
+      .d1 { animation-delay: .2s } .d2 { animation-delay: .5s } .d3 { animation-delay: .8s } .d4 { animation-delay: 1.1s } .d5 { animation-delay: 1.4s }
+      @keyframes draw { to { stroke-dashoffset: 0 } }
+      .fade { opacity: 0; animation: fade .9s ease-out forwards; }
+      .f1 { animation-delay: .15s } .f2 { animation-delay: .35s } .f3 { animation-delay: .55s } .f4 { animation-delay: .8s } .f5 { animation-delay: 1.2s } .f6 { animation-delay: 1.6s } .f7 { animation-delay: 2s }
+      @keyframes fade { to { opacity: 1 } }
+      .rule { transform-origin: 72px 0; transform: scaleX(0); animation: rule 1.2s .9s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes rule { to { transform: scaleX(1) } }
+      .led { animation: led 2.4s ease-in-out infinite; }
+      .led.l2 { animation-delay: .8s } .led.l3 { animation-delay: 1.6s }
+      @keyframes led { 0%,100% { opacity: .35 } 50% { opacity: 1 } }
+      .cursor { animation: blink 1.1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0 } }
+      .sweep { animation: sweep 9s linear infinite; }
+      @keyframes sweep { from { transform: translateX(-80px) } to { transform: translateX(1280px) } }
+      @media (prefers-reduced-motion: reduce) { .draw, .fade, .rule { animation-duration: .01s; animation-delay: 0s } .led, .cursor, .sweep { animation: none } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#sheet)">
+    <rect width="1200" height="420" fill="url(#ink)"/>
+    <rect width="1200" height="420" fill="url(#minor)"/>
+    <rect width="1200" height="420" fill="url(#major)"/>
+    <rect width="1200" height="420" fill="url(#vignette)"/>
+
+    <!-- drafting sheet border + registration marks -->
+    <rect x="18" y="18" width="1164" height="384" fill="none" stroke="#7aa0cf" stroke-opacity="0.35" stroke-width="1"/>
+    <g stroke="#d9a441" stroke-opacity="0.8" stroke-width="1">
+      <path d="M18 40V18H40 M1160 18H1182V40 M18 380V402H40 M1160 402H1182V380"/>
+    </g>
+    <!-- light sweep across the sheet -->
+    <rect class="sweep" x="0" y="0" width="80" height="420" fill="#ffffff" fill-opacity="0.025"/>
+
+    <!-- LEFT: identity -->
+    <text class="mono fade f1" x="72" y="118" fill="#d9a441" font-size="12" letter-spacing="3.5">SOFTWARE ENGINEER · 42 ABU DHABI</text>
+    <text class="sans fade f2" x="71" y="186" fill="#ece7d9" font-size="50" font-weight="800" letter-spacing="0.5">JAFAR ALWAHEIDI</text>
+    <rect class="rule" x="72" y="202" width="420" height="2" fill="#d9a441"/>
+    <text class="sans fade f3" x="72" y="238" fill="#c9d3e0" font-size="17.5" font-weight="500">C/C++ systems programming · full-stack web · infrastructure</text>
+    <text class="mono fade f4" x="72" y="272" fill="#8fa3bd" font-size="14">C · C++ · Node.js · React · PostgreSQL · Docker · NGINX</text>
+    <g class="fade f5">
+      <text class="mono" x="72" y="318" fill="#4fc3b8" font-size="14">$</text>
+      <text class="mono" x="88" y="318" fill="#ece7d9" font-size="14">make profile</text>
+      <rect class="cursor" x="206" y="306" width="8" height="15" fill="#4fc3b8"/>
+    </g>
+
+    <!-- RIGHT: request-path schematic -->
+    <g class="mono" font-size="10.5" fill="#8fa3bd">
+      <!-- dimension line -->
+      <g class="fade f6" stroke="#7aa0cf" stroke-opacity="0.6" stroke-width="1">
+        <path d="M660 138 V128 M1100 138 V128 M660 133 H1100" fill="none"/>
+        <path d="M660 133 l6 -3 v6 z M1100 133 l-6 -3 v6 z" fill="#7aa0cf" stroke="none"/>
+      </g>
+      <text class="fade f6" x="880" y="122" text-anchor="middle" fill="#8fa3bd" letter-spacing="2">REQUEST PATH</text>
+
+      <!-- nodes -->
+      <rect class="draw d1" x="660" y="170" width="110" height="56" rx="3" fill="#0d1c31" stroke="#ece7d9" stroke-opacity="0.85" stroke-width="1.2"/>
+      <text class="fade f3" x="715" y="193" text-anchor="middle" fill="#ece7d9" font-size="12" letter-spacing="1.5">CLIENT</text>
+      <text class="fade f3" x="715" y="211" text-anchor="middle">React · Vite</text>
+
+      <rect class="draw d2" x="820" y="170" width="120" height="56" rx="3" fill="#0d1c31" stroke="#ece7d9" stroke-opacity="0.85" stroke-width="1.2"/>
+      <text class="fade f4" x="880" y="193" text-anchor="middle" fill="#ece7d9" font-size="12" letter-spacing="1.5">NGINX</text>
+      <text class="fade f4" x="880" y="211" text-anchor="middle">TLS 1.3 · :443</text>
+
+      <rect class="draw d3" x="990" y="170" width="110" height="56" rx="3" fill="#0d1c31" stroke="#ece7d9" stroke-opacity="0.85" stroke-width="1.2"/>
+      <text class="fade f5" x="1045" y="193" text-anchor="middle" fill="#ece7d9" font-size="12" letter-spacing="1.5">API</text>
+      <text class="fade f5" x="1045" y="211" text-anchor="middle">Express · :8787</text>
+
+      <!-- database cylinder -->
+      <g class="draw d4" fill="none" stroke="#ece7d9" stroke-opacity="0.85" stroke-width="1.2">
+        <path d="M1000 286 a45 9 0 0 1 90 0 v38 a45 9 0 0 1 -90 0 z"/>
+        <path d="M1000 286 a45 9 0 0 0 90 0"/>
+      </g>
+      <text class="fade f6" x="1045" y="316" text-anchor="middle" fill="#ece7d9" font-size="11" letter-spacing="1.5">POSTGRES</text>
+      <text class="fade f6" x="1045" y="352" text-anchor="middle">:5432</text>
+
+      <!-- traces -->
+      <g fill="none" stroke="#4fc3b8" stroke-opacity="0.7" stroke-width="1.2">
+        <use href="#p-c2n" class="draw d2"/>
+        <use href="#p-n2a" class="draw d3"/>
+        <use href="#p-a2d" class="draw d4"/>
+      </g>
+      <!-- status LEDs -->
+      <circle class="led" cx="765" cy="175" r="2.2" fill="#4fc3b8" filter="url(#glow)"/>
+      <circle class="led l2" cx="935" cy="175" r="2.2" fill="#4fc3b8" filter="url(#glow)"/>
+      <circle class="led l3" cx="1095" cy="175" r="2.2" fill="#4fc3b8" filter="url(#glow)"/>
+
+      <!-- packets: request (brass) outbound, response (teal) inbound -->
+      <circle r="3" fill="#d9a441" filter="url(#glow)">
+        <animateMotion dur="1.1s" begin="2s;req3.end+0.9s" fill="freeze" id="req1"><mpath href="#p-c2n"/></animateMotion>
+      </circle>
+      <circle r="3" fill="#d9a441" filter="url(#glow)" opacity="0">
+        <set attributeName="opacity" to="1" begin="req1.end"/>
+        <set attributeName="opacity" to="0" begin="req2.end"/>
+        <animateMotion dur="1.1s" begin="req1.end" fill="freeze" id="req2"><mpath href="#p-n2a"/></animateMotion>
+      </circle>
+      <circle r="3" fill="#d9a441" filter="url(#glow)" opacity="0">
+        <set attributeName="opacity" to="1" begin="req2.end"/>
+        <set attributeName="opacity" to="0" begin="req3.end"/>
+        <animateMotion dur="1.1s" begin="req2.end" fill="freeze" id="req3"><mpath href="#p-a2d"/></animateMotion>
+      </circle>
+      <circle r="2.6" fill="#4fc3b8" filter="url(#glow)" opacity="0">
+        <set attributeName="opacity" to="1" begin="req3.end+0.2s"/>
+        <set attributeName="opacity" to="0" begin="res.end"/>
+        <animateMotion dur="2.4s" begin="req3.end+0.2s" fill="freeze" id="res"><mpath href="#p-back"/></animateMotion>
+      </circle>
+
+      <!-- annotations -->
+      <text class="fade f7" x="795" y="188" text-anchor="middle" fill="#4fc3b8" font-size="9.5">HTTPS</text>
+      <text class="fade f7" x="965" y="188" text-anchor="middle" fill="#4fc3b8" font-size="9.5">proxy</text>
+      <text class="fade f7" x="1062" y="256" fill="#4fc3b8" font-size="9.5">SQL</text>
+    </g>
+
+    <!-- title block (drafting convention) -->
+    <g class="mono fade f7" font-size="9.5" fill="#8fa3bd">
+      <rect x="760" y="364" width="422" height="38" fill="#0a1527" stroke="#7aa0cf" stroke-opacity="0.45"/>
+      <path d="M900 364V402 M1040 364V402" stroke="#7aa0cf" stroke-opacity="0.45"/>
+      <text x="770" y="378" letter-spacing="1.5">SHEET</text><text x="770" y="393" fill="#ece7d9">00 · COVER</text>
+      <text x="910" y="378" letter-spacing="1.5">DRAWN BY</text><text x="910" y="393" fill="#ece7d9">J. ALWAHEIDI</text>
+      <text x="1050" y="378" letter-spacing="1.5">REVISION</text><text x="1050" y="393" fill="#ece7d9">2026.10 · SCALE 1:1</text>
+    </g>
+  </g>
+</svg>

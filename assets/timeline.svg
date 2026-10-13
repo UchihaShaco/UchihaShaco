@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="Build log timeline">
+<defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1c31"/><stop offset="1" stop-color="#0a1527"/></linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.45"/></radialGradient>
+    <pattern id="minor" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#7aa0cf" stroke-opacity="0.07" stroke-width="0.6"/></pattern>
+    <pattern id="major" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#7aa0cf" stroke-opacity="0.16" stroke-width="0.8"/></pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="sheet"><rect width="1200" height="440" rx="14"/></clipPath>
+    <path id="tl" d="M92 236 H1108"/>
+    <style>
+      .sans { font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", Arial, sans-serif; }
+      .mono { font-family: "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, "Liberation Mono", monospace; }
+      .fade { opacity: 0; animation: fade .8s ease-out forwards; }
+      @keyframes fade { to { opacity: 1 } }
+      .draw { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: draw 2.2s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes draw { to { stroke-dashoffset: 0 } }
+      .rule { transform: scaleX(0); animation: rule 1s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes rule { to { transform: scaleX(1) } }
+      .pulse { animation: pulse 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes pulse { 0%,100% { opacity: .25; transform: scale(1) } 50% { opacity: .9; transform: scale(1.9) } }
+      .scan { animation: scan 1.6s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes scan { from { transform: translateY(0); opacity: .9 } to { transform: translateY(var(--h)); opacity: 0 } }
+      .trace { stroke-dasharray: 6 10; animation: trace 14s linear infinite; }
+      @keyframes trace { to { stroke-dashoffset: -320 } }
+      .sweep { animation: sweep 11s linear infinite; }
+      @keyframes sweep { from { transform: translateX(-80px) } to { transform: translateX(1280px) } }
+      @media (prefers-reduced-motion: reduce) { .fade, .draw, .rule, .scan { animation-duration: .01s; animation-delay: 0s } .pulse, .trace, .sweep { animation: none } }
+    </style>
+  </defs>
+<g clip-path="url(#sheet)">
+<rect width="1200" height="440" fill="url(#ink)"/>
+    <rect width="1200" height="440" fill="url(#minor)"/>
+    <rect width="1200" height="440" fill="url(#major)"/>
+    <rect width="1200" height="440" fill="url(#vignette)"/>
+    <rect x="18" y="18" width="1164" height="404" fill="none" stroke="#7aa0cf" stroke-opacity="0.35" stroke-width="1"/>
+    <path d="M18 40V18H40 M1160 18H1182V40 M18 400V422H40 M1160 422H1182V400" fill="none" stroke="#d9a441" stroke-opacity="0.8" stroke-width="1"/>
+    <rect class="sweep" x="0" y="0" width="80" height="440" fill="#ffffff" fill-opacity="0.025"/>
+<text class="mono fade" x="60" y="62" fill="#d9a441" font-size="12" letter-spacing="3.5">SHEET 04 · BUILD LOG</text>
+<text class="sans fade" style="animation-delay:.15s" x="59" y="98" fill="#ece7d9" font-size="28" font-weight="800" letter-spacing=".5">WHAT I HAVE BUILT</text>
+<text class="mono fade" style="animation-delay:.3s" x="60" y="122" fill="#8fa3bd" font-size="12.5">2023 → 2026 · from C and POSIX to full-stack platforms</text>
+<use href="#tl" class="draw" fill="none" stroke="#4fc3b8" stroke-opacity=".75" stroke-width="1.4"/>
+<use href="#tl" class="trace" fill="none" stroke="#d9a441" stroke-opacity=".5" stroke-width="1.4" style="animation-duration:18s"/>
+<circle r="3.2" fill="#d9a441" filter="url(#glow)"><animateMotion dur="9s" begin="2.4s" repeatCount="indefinite"><mpath href="#tl"/></animateMotion></circle>
+<line class="draw" style="animation-delay:0.40s; animation-duration:.6s" x1="92" y1="236" x2="92" y2="190" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.40s">
+<circle cx="92" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:0.50s" text-anchor="middle">
+<text class="mono" x="92" y="156" fill="#d9a441" font-size="10" letter-spacing="1.5">2023</text>
+<text class="sans" x="92" y="173" fill="#ece7d9" font-size="12.5" font-weight="700">C foundations</text>
+<text class="mono" x="92" y="189" fill="#8fa3bd" font-size="9.5">libft · printf · get_next_line</text>
+<text class="mono" x="92" y="202" fill="#8fa3bd" font-size="9.5">minitalk · push_swap · so_long</text>
+</g>
+<line class="draw" style="animation-delay:0.56s; animation-duration:.6s" x1="184" y1="236" x2="184" y2="282" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.56s">
+<circle cx="184" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:0.66s" text-anchor="middle">
+<text class="mono" x="184" y="298" fill="#d9a441" font-size="10" letter-spacing="1.5">2023</text>
+<text class="sans" x="184" y="315" fill="#ece7d9" font-size="12.5" font-weight="700">Tinyshell</text>
+<text class="mono" x="184" y="331" fill="#8fa3bd" font-size="9.5">POSIX shell: pipes, redirects,</text>
+<text class="mono" x="184" y="344" fill="#8fa3bd" font-size="9.5">heredocs, signals, readline</text>
+</g>
+<line class="draw" style="animation-delay:0.72s; animation-duration:.6s" x1="277" y1="236" x2="277" y2="190" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.72s">
+<circle cx="277" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:0.82s" text-anchor="middle">
+<text class="mono" x="277" y="156" fill="#d9a441" font-size="10" letter-spacing="1.5">2023</text>
+<text class="sans" x="277" y="173" fill="#ece7d9" font-size="12.5" font-weight="700">philosophers</text>
+<text class="mono" x="277" y="189" fill="#8fa3bd" font-size="9.5">threads, mutexes,</text>
+<text class="mono" x="277" y="202" fill="#8fa3bd" font-size="9.5">starvation monitor</text>
+</g>
+<line class="draw" style="animation-delay:0.88s; animation-duration:.6s" x1="369" y1="236" x2="369" y2="282" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.88s">
+<circle cx="369" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:0.98s" text-anchor="middle">
+<text class="mono" x="369" y="298" fill="#d9a441" font-size="10" letter-spacing="1.5">2023–24</text>
+<text class="sans" x="369" y="315" fill="#ece7d9" font-size="12.5" font-weight="700">C++ modules 00→09</text>
+<text class="mono" x="369" y="331" fill="#8fa3bd" font-size="9.5">OOP, exceptions, casts,</text>
+<text class="mono" x="369" y="344" fill="#8fa3bd" font-size="9.5">templates, STL</text>
+</g>
+<line class="draw" style="animation-delay:1.04s; animation-duration:.6s" x1="461" y1="236" x2="461" y2="190" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.04s">
+<circle cx="461" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:1.14s" text-anchor="middle">
+<text class="mono" x="461" y="156" fill="#d9a441" font-size="10" letter-spacing="1.5">2024</text>
+<text class="sans" x="461" y="173" fill="#ece7d9" font-size="12.5" font-weight="700">Inception</text>
+<text class="mono" x="461" y="189" fill="#8fa3bd" font-size="9.5">NGINX TLS · WordPress</text>
+<text class="mono" x="461" y="202" fill="#8fa3bd" font-size="9.5">MariaDB · Docker Compose</text>
+</g>
+<line class="draw" style="animation-delay:1.20s; animation-duration:.6s" x1="554" y1="236" x2="554" y2="282" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.20s">
+<circle cx="554" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:1.30s" text-anchor="middle">
+<text class="mono" x="554" y="298" fill="#d9a441" font-size="10" letter-spacing="1.5">2024</text>
+<text class="sans" x="554" y="315" fill="#ece7d9" font-size="12.5" font-weight="700">AI review reporting</text>
+<text class="mono" x="554" y="331" fill="#8fa3bd" font-size="9.5">Python · pandas</text>
+<text class="mono" x="554" y="344" fill="#8fa3bd" font-size="9.5">image-analysis API</text>
+</g>
+<line class="draw" style="animation-delay:1.36s; animation-duration:.6s" x1="646" y1="236" x2="646" y2="190" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.36s">
+<circle cx="646" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:1.46s" text-anchor="middle">
+<text class="mono" x="646" y="156" fill="#d9a441" font-size="10" letter-spacing="1.5">2025</text>
+<text class="sans" x="646" y="173" fill="#ece7d9" font-size="12.5" font-weight="700">Voting &amp; polling apps</text>
+<text class="mono" x="646" y="189" fill="#8fa3bd" font-size="9.5">React · TypeScript · Tailwind</text>
+<text class="mono" x="646" y="202" fill="#8fa3bd" font-size="9.5">Supabase realtime · Deno</text>
+</g>
+<line class="draw" style="animation-delay:1.52s; animation-duration:.6s" x1="739" y1="236" x2="739" y2="282" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.52s">
+<circle cx="739" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:1.62s" text-anchor="middle">
+<text class="mono" x="739" y="298" fill="#d9a441" font-size="10" letter-spacing="1.5">2025</text>
+<text class="sans" x="739" y="315" fill="#ece7d9" font-size="12.5" font-weight="700">PDF region cropper</text>
+<text class="mono" x="739" y="331" fill="#8fa3bd" font-size="9.5">Next.js · Tailwind · pdf.js</text>
+<text class="mono" x="739" y="344" fill="#8fa3bd" font-size="9.5">AI-detection reports</text>
+</g>
+<line class="draw" style="animation-delay:1.68s; animation-duration:.6s" x1="831" y1="236" x2="831" y2="190" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.68s">
+<circle cx="831" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:1.78s" text-anchor="middle">
+<text class="mono" x="831" y="156" fill="#d9a441" font-size="10" letter-spacing="1.5">2026</text>
+<text class="sans" x="831" y="173" fill="#ece7d9" font-size="12.5" font-weight="700">Editorial AI suite</text>
+<text class="mono" x="831" y="189" fill="#8fa3bd" font-size="9.5">Flask · SQLite · pytest</text>
+<text class="mono" x="831" y="202" fill="#8fa3bd" font-size="9.5">multi-provider LLM proxy</text>
+</g>
+<line class="draw" style="animation-delay:1.84s; animation-duration:.6s" x1="923" y1="236" x2="923" y2="282" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.84s">
+<circle cx="923" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:1.94s" text-anchor="middle">
+<text class="mono" x="923" y="298" fill="#d9a441" font-size="10" letter-spacing="1.5">2026</text>
+<text class="sans" x="923" y="315" fill="#ece7d9" font-size="12.5" font-weight="700">Publishing ops platform</text>
+<text class="mono" x="923" y="331" fill="#8fa3bd" font-size="9.5">ASP.NET Core 9 · Next.js</text>
+<text class="mono" x="923" y="344" fill="#8fa3bd" font-size="9.5">EF Core · PostgreSQL · Redis</text>
+</g>
+<line class="draw" style="animation-delay:2.00s; animation-duration:.6s" x1="1016" y1="236" x2="1016" y2="190" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:2.00s">
+<circle cx="1016" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:2.10s" text-anchor="middle">
+<text class="mono" x="1016" y="156" fill="#d9a441" font-size="10" letter-spacing="1.5">2026</text>
+<text class="sans" x="1016" y="173" fill="#ece7d9" font-size="12.5" font-weight="700">Event point-of-sale PWA</text>
+<text class="mono" x="1016" y="189" fill="#8fa3bd" font-size="9.5">TypeScript · Express · Drizzle</text>
+<text class="mono" x="1016" y="202" fill="#8fa3bd" font-size="9.5">offline-first · EN/AR</text>
+</g>
+<line class="draw" style="animation-delay:2.16s; animation-duration:.6s" x1="1108" y1="236" x2="1108" y2="282" stroke="#7aa0cf" stroke-opacity=".55" stroke-width="1"/>
+<g class="fade" style="animation-delay:2.16s">
+<circle class="pulse" cx="1108" cy="236" r="6" fill="#d9a441" fill-opacity=".5"/>
+<circle cx="1108" cy="236" r="5" fill="#0d1c31" stroke="#d9a441" stroke-width="1.6"/>
+</g>
+<g class="fade" style="animation-delay:2.26s" text-anchor="middle">
+<text class="mono" x="1108" y="298" fill="#d9a441" font-size="10" letter-spacing="1.5">2026</text>
+<text class="sans" x="1108" y="315" fill="#ece7d9" font-size="12.5" font-weight="700">Marketing content platform</text>
+<text class="mono" x="1108" y="331" fill="#8fa3bd" font-size="9.5">React 19 · Express · Prisma</text>
+<text class="mono" x="1108" y="344" fill="#8fa3bd" font-size="9.5">PostgreSQL · CI · 2FA</text>
+</g>
+<g class="mono fade" style="animation-delay:2.4s" font-size="10.5">
+<rect x="60" y="364" width="1080" height="38" fill="#0a1527" stroke="#7aa0cf" stroke-opacity=".4"/>
+<text x="74" y="387" fill="#d9a441" letter-spacing="2">TEAM BUILDS · 42 ABU DHABI</text>
+<text x="300" y="387" fill="#ece7d9">miniRT <tspan fill="#8fa3bd">ray tracer in C</tspan>   ·   webserv <tspan fill="#8fa3bd">HTTP/1.1 server in C++98</tspan>   ·   Pet-Facial-Recognition <tspan fill="#8fa3bd">computer vision</tspan></text>
+</g>
+</g></svg>

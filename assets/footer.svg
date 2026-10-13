@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 110" width="1200" height="110" role="img" aria-label="End of sheet set">
+<defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1c31"/><stop offset="1" stop-color="#0a1527"/></linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.45"/></radialGradient>
+    <pattern id="minor" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#7aa0cf" stroke-opacity="0.07" stroke-width="0.6"/></pattern>
+    <pattern id="major" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#7aa0cf" stroke-opacity="0.16" stroke-width="0.8"/></pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="sheet"><rect width="1200" height="110" rx="14"/></clipPath>
+    <path id="fp" d="M60 56 H1140"/>
+    <style>
+      .sans { font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", Arial, sans-serif; }
+      .mono { font-family: "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, "Liberation Mono", monospace; }
+      .fade { opacity: 0; animation: fade .8s ease-out forwards; }
+      @keyframes fade { to { opacity: 1 } }
+      .draw { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: draw 2.2s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes draw { to { stroke-dashoffset: 0 } }
+      .rule { transform: scaleX(0); animation: rule 1s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes rule { to { transform: scaleX(1) } }
+      .pulse { animation: pulse 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes pulse { 0%,100% { opacity: .25; transform: scale(1) } 50% { opacity: .9; transform: scale(1.9) } }
+      .scan { animation: scan 1.6s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes scan { from { transform: translateY(0); opacity: .9 } to { transform: translateY(var(--h)); opacity: 0 } }
+      .trace { stroke-dasharray: 6 10; animation: trace 14s linear infinite; }
+      @keyframes trace { to { stroke-dashoffset: -320 } }
+      .sweep { animation: sweep 11s linear infinite; }
+      @keyframes sweep { from { transform: translateX(-80px) } to { transform: translateX(1280px) } }
+      @media (prefers-reduced-motion: reduce) { .fade, .draw, .rule, .scan { animation-duration: .01s; animation-delay: 0s } .pulse, .trace, .sweep { animation: none } }
+    </style>
+  </defs>
+<g clip-path="url(#sheet)">
+<rect width="1200" height="110" fill="url(#ink)"/>
+    <rect width="1200" height="110" fill="url(#minor)"/>
+    <rect width="1200" height="110" fill="url(#major)"/>
+    <rect width="1200" height="110" fill="url(#vignette)"/>
+    <rect x="18" y="18" width="1164" height="74" fill="none" stroke="#7aa0cf" stroke-opacity="0.35" stroke-width="1"/>
+    <path d="M18 40V18H40 M1160 18H1182V40 M18 70V92H40 M1160 92H1182V70" fill="none" stroke="#d9a441" stroke-opacity="0.8" stroke-width="1"/>
+    <rect class="sweep" x="0" y="0" width="80" height="110" fill="#ffffff" fill-opacity="0.025"/>
+<use href="#fp" class="draw" fill="none" stroke="#4fc3b8" stroke-opacity=".7" stroke-width="1.2"/>
+<circle r="3" fill="#d9a441" filter="url(#glow)"><animateMotion dur="7s" begin="1.5s" repeatCount="indefinite"><mpath href="#fp"/></animateMotion></circle>
+<rect x="420" y="40" width="360" height="32" fill="#0d1c31"/>
+<text class="mono fade" style="animation-delay:.8s" x="600" y="61" text-anchor="middle" fill="#ece7d9" font-size="12.5" letter-spacing="3">END OF DRAWING SET · NEXT REVISION IN PROGRESS</text>
+<text class="mono fade" style="animation-delay:1.2s" x="60" y="92" fill="#8fa3bd" font-size="10" letter-spacing="1.5">DRAWN IN ABU DHABI</text>
+<text class="mono fade" style="animation-delay:1.2s" x="1140" y="92" text-anchor="end" fill="#8fa3bd" font-size="10" letter-spacing="1.5">github.com/UchihaShaco · REV 2026.10</text>
+</g></svg>
