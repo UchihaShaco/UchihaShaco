@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 214" width="290" height="214" role="img" aria-label="Tinyshell">
+<defs><pattern id="minor" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#7aa0cf" stroke-opacity="0.08" stroke-width="0.6"/></pattern>
+    <clipPath id="c"><rect width="290" height="214" rx="8"/></clipPath>
+    <style>
+      .sans { font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", Arial, sans-serif; } .mono { font-family: "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, "Liberation Mono", monospace; }
+      .rise { opacity: 0; transform: translateY(10px); animation: rise .7s cubic-bezier(.2,.8,.2,1) forwards; } @keyframes rise { to { opacity: 1; transform: translateY(0) } }
+      .meter { transform-origin: left center; transform: scaleX(0); animation: meter 1.3s .5s cubic-bezier(.4,0,.2,1) forwards; } @keyframes meter { to { transform: scaleX(1) } }
+      .trace { stroke-dasharray: 5 9; animation: trace 12s linear infinite; } @keyframes trace { to { stroke-dashoffset: -280 } }
+      @media (prefers-reduced-motion: reduce) { .rise,.meter { animation-duration:.01s; animation-delay:0s } .trace { animation:none } }
+    </style></defs>
+<g clip-path="url(#c)"><rect width="290" height="214" fill="#0a1527"/><rect width="290" height="214" fill="url(#minor)"/>
+<rect x=".6" y=".6" width="288.8" height="212.8" rx="8" fill="none" stroke="#7aa0cf" stroke-opacity=".45"/>
+<path d="M1 16V1H16 M274 1H289V16" fill="none" stroke="#d9a441" stroke-opacity=".9"/>
+<g class="rise">
+<text class="mono" x="18" y="30" fill="#d9a441" font-size="9.5" letter-spacing="2.5">PUBLIC BUILD</text>
+<text class="sans" x="18" y="58" fill="#ece7d9" font-size="16.5" font-weight="700">Tinyshell</text>
+<text class="mono" x="18" y="82" fill="#8fa3bd" font-size="10.5">POSIX shell: pipes, redirections,</text>
+<text class="mono" x="18" y="98" fill="#8fa3bd" font-size="10.5">heredocs, signals, readline</text>
+<rect x="18" y="126" width="23" height="19" rx="2" fill="#4fc3b8" fill-opacity=".12" stroke="#4fc3b8" stroke-opacity=".45"/>
+<text class="mono" x="30" y="139" text-anchor="middle" fill="#ece7d9" font-size="10.5">C</text>
+<rect x="47" y="126" width="72" height="19" rx="2" fill="#4fc3b8" fill-opacity=".12" stroke="#4fc3b8" stroke-opacity=".45"/>
+<text class="mono" x="83" y="139" text-anchor="middle" fill="#ece7d9" font-size="10.5">readline</text>
+<rect x="125" y="126" width="44" height="19" rx="2" fill="#4fc3b8" fill-opacity=".12" stroke="#4fc3b8" stroke-opacity=".45"/>
+<text class="mono" x="147" y="139" text-anchor="middle" fill="#ece7d9" font-size="10.5">Make</text>
+</g>
+<line class="trace" x1="18" y1="184" x2="272" y2="184" stroke="#7aa0cf" stroke-opacity=".5" stroke-width="1"/>
+<rect x="18" y="192" width="254" height="3" fill="#ffffff" fill-opacity=".08"/><rect class="meter" x="18" y="192" width="254" height="3" fill="#d9a441"/>
+</g></svg>

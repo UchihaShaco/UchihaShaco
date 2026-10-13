@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Technical stack">
+<defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1c31"/><stop offset="1" stop-color="#0a1527"/></linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.45"/></radialGradient>
+    <pattern id="minor" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#7aa0cf" stroke-opacity="0.07" stroke-width="0.6"/></pattern>
+    <pattern id="major" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#7aa0cf" stroke-opacity="0.16" stroke-width="0.8"/></pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="sheet"><rect width="1200" height="630" rx="14"/></clipPath>
+    
+    <style>
+      .sans { font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", Arial, sans-serif; }
+      .mono { font-family: "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, "Liberation Mono", monospace; }
+      .fade { opacity: 0; animation: fade .8s ease-out forwards; }
+      @keyframes fade { to { opacity: 1 } }
+      .draw { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: draw 2.2s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes draw { to { stroke-dashoffset: 0 } }
+      .rule { transform: scaleX(0); animation: rule 1s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes rule { to { transform: scaleX(1) } }
+      .pulse { animation: pulse 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes pulse { 0%,100% { opacity: .25; transform: scale(1) } 50% { opacity: .9; transform: scale(1.9) } }
+      .scan { animation: scan 1.6s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes scan { from { transform: translateY(0); opacity: .9 } to { transform: translateY(var(--h)); opacity: 0 } }
+      .trace { stroke-dasharray: 6 10; animation: trace 14s linear infinite; }
+      @keyframes trace { to { stroke-dashoffset: -320 } }
+      .sweep { animation: sweep 11s linear infinite; }
+      @keyframes sweep { from { transform: translateX(-80px) } to { transform: translateX(1280px) } }
+      @media (prefers-reduced-motion: reduce) { .fade, .draw, .rule, .scan { animation-duration: .01s; animation-delay: 0s } .pulse, .trace, .sweep { animation: none } }
+    </style>
+  </defs>
+<g clip-path="url(#sheet)">
+<rect width="1200" height="630" fill="url(#ink)"/>
+    <rect width="1200" height="630" fill="url(#minor)"/>
+    <rect width="1200" height="630" fill="url(#major)"/>
+    <rect width="1200" height="630" fill="url(#vignette)"/>
+    <rect x="18" y="18" width="1164" height="594" fill="none" stroke="#7aa0cf" stroke-opacity="0.35" stroke-width="1"/>
+    <path d="M18 40V18H40 M1160 18H1182V40 M18 590V612H40 M1160 612H1182V590" fill="none" stroke="#d9a441" stroke-opacity="0.8" stroke-width="1"/>
+    <rect class="sweep" x="0" y="0" width="80" height="630" fill="#ffffff" fill-opacity="0.025"/>
+<text class="mono fade" x="60" y="70" fill="#d9a441" font-size="12" letter-spacing="3.5">SHEET 02 · TECHNICAL STACK</text>
+<text class="sans fade" style="animation-delay:.15s" x="59" y="108" fill="#ece7d9" font-size="30" font-weight="800" letter-spacing=".5">WHAT I BUILD WITH</text>
+<text class="mono fade" style="animation-delay:.3s" x="60" y="134" fill="#8fa3bd" font-size="13">Everything on this sheet is in code I wrote or co-wrote.</text>
+<g class="fade" style="animation-delay:0.35s">
+<text class="mono" x="60" y="176" fill="#d9a441" font-size="11.5" letter-spacing="2.5">SYSTEMS &amp; LOW-LEVEL</text>
+<text class="mono" x="60" y="193" fill="#8fa3bd" font-size="10.5">where I started</text>
+</g>
+<rect class="rule" style="transform-origin:60px 0; animation-delay:0.45s" x="60" y="203" width="248" height="1.2" fill="#4fc3b8" fill-opacity=".9"/>
+<line class="trace" x1="60" y1="203.6" x2="308" y2="203.6" stroke="#d9a441" stroke-opacity=".55" stroke-width="1.2"/>
+<g class="fade" style="animation-delay:0.60s">
+<rect x="60" y="223" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="72" y="232" fill="#ece7d9" font-size="13.5" font-weight="600">C · POSIX</text>
+<text class="mono" x="72" y="247" fill="#8fa3bd" font-size="10.5">fork, execve, pipes, dup2</text>
+</g>
+<line x1="60" y1="256" x2="308" y2="256" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.67s">
+<rect x="60" y="263" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="72" y="272" fill="#ece7d9" font-size="13.5" font-weight="600">C++98</text>
+<text class="mono" x="72" y="287" fill="#8fa3bd" font-size="10.5">OOP, templates, STL</text>
+</g>
+<line x1="60" y1="296" x2="308" y2="296" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.74s">
+<rect x="60" y="303" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="72" y="312" fill="#ece7d9" font-size="13.5" font-weight="600">pthreads</text>
+<text class="mono" x="72" y="327" fill="#8fa3bd" font-size="10.5">mutexes, deadlock avoidance</text>
+</g>
+<line x1="60" y1="336" x2="308" y2="336" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.81s">
+<rect x="60" y="343" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="72" y="352" fill="#ece7d9" font-size="13.5" font-weight="600">UNIX signals</text>
+<text class="mono" x="72" y="367" fill="#8fa3bd" font-size="10.5">SIGUSR1/2 bit protocols</text>
+</g>
+<line x1="60" y1="376" x2="308" y2="376" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.88s">
+<rect x="60" y="383" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="72" y="392" fill="#ece7d9" font-size="13.5" font-weight="600">GNU readline</text>
+<text class="mono" x="72" y="407" fill="#8fa3bd" font-size="10.5">line editing, history</text>
+</g>
+<line x1="60" y1="416" x2="308" y2="416" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.95s">
+<rect x="60" y="423" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="72" y="432" fill="#ece7d9" font-size="13.5" font-weight="600">MiniLibX</text>
+<text class="mono" x="72" y="447" fill="#8fa3bd" font-size="10.5">sprites, event hooks</text>
+</g>
+<line x1="60" y1="456" x2="308" y2="456" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.02s">
+<rect x="60" y="463" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="72" y="472" fill="#ece7d9" font-size="13.5" font-weight="600">Ray tracing</text>
+<text class="mono" x="72" y="487" fill="#8fa3bd" font-size="10.5">team build, C</text>
+</g>
+<line x1="60" y1="496" x2="308" y2="496" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.09s">
+<rect x="60" y="503" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="72" y="512" fill="#ece7d9" font-size="13.5" font-weight="600">HTTP/1.1 server</text>
+<text class="mono" x="72" y="527" fill="#8fa3bd" font-size="10.5">team build, C++98</text>
+</g>
+<line x1="60" y1="536" x2="308" y2="536" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.16s">
+<rect x="60" y="543" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="72" y="552" fill="#ece7d9" font-size="13.5" font-weight="600">Make · Valgrind</text>
+<text class="mono" x="72" y="567" fill="#8fa3bd" font-size="10.5">static archives, leak audits</text>
+</g>
+<line x1="60" y1="576" x2="308" y2="576" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<rect class="scan" style="--h:376px; animation-delay:0.65s" x="60" y="206" width="248" height="18" fill="#4fc3b8" fill-opacity=".10"/>
+<g class="fade" style="animation-delay:0.53s">
+<text class="mono" x="334" y="176" fill="#d9a441" font-size="11.5" letter-spacing="2.5">WEB &amp; APPLICATION</text>
+<text class="mono" x="334" y="193" fill="#8fa3bd" font-size="10.5">what users touch</text>
+</g>
+<rect class="rule" style="transform-origin:334px 0; animation-delay:0.63s" x="334" y="203" width="248" height="1.2" fill="#4fc3b8" fill-opacity=".9"/>
+<line class="trace" x1="334" y1="203.6" x2="582" y2="203.6" stroke="#d9a441" stroke-opacity=".55" stroke-width="1.2"/>
+<g class="fade" style="animation-delay:0.78s">
+<rect x="334" y="223" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="346" y="232" fill="#ece7d9" font-size="13.5" font-weight="600">TypeScript</text>
+<text class="mono" x="346" y="247" fill="#8fa3bd" font-size="10.5">strict, monorepo workspaces</text>
+</g>
+<line x1="334" y1="256" x2="582" y2="256" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.85s">
+<rect x="334" y="263" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="346" y="272" fill="#ece7d9" font-size="13.5" font-weight="600">JavaScript (ESM)</text>
+</g>
+<line x1="334" y1="296" x2="582" y2="296" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.92s">
+<rect x="334" y="303" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="346" y="312" fill="#ece7d9" font-size="13.5" font-weight="600">React 19</text>
+<text class="mono" x="346" y="327" fill="#8fa3bd" font-size="10.5">hooks, context, i18n EN/AR</text>
+</g>
+<line x1="334" y1="336" x2="582" y2="336" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:0.99s">
+<rect x="334" y="343" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="346" y="352" fill="#ece7d9" font-size="13.5" font-weight="600">Next.js</text>
+<text class="mono" x="346" y="367" fill="#8fa3bd" font-size="10.5">App Router</text>
+</g>
+<line x1="334" y1="376" x2="582" y2="376" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.06s">
+<rect x="334" y="383" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="346" y="392" fill="#ece7d9" font-size="13.5" font-weight="600">Vite</text>
+<text class="mono" x="346" y="407" fill="#8fa3bd" font-size="10.5">custom plugins, code splitting</text>
+</g>
+<line x1="334" y1="416" x2="582" y2="416" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.13s">
+<rect x="334" y="423" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="346" y="432" fill="#ece7d9" font-size="13.5" font-weight="600">Tailwind CSS</text>
+<text class="mono" x="346" y="447" fill="#8fa3bd" font-size="10.5">+ shadcn/ui, Radix</text>
+</g>
+<line x1="334" y1="456" x2="582" y2="456" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.20s">
+<rect x="334" y="463" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="346" y="472" fill="#ece7d9" font-size="13.5" font-weight="600">React Router</text>
+<text class="mono" x="346" y="487" fill="#8fa3bd" font-size="10.5">guards, protected routes</text>
+</g>
+<line x1="334" y1="496" x2="582" y2="496" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.27s">
+<rect x="334" y="503" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="346" y="512" fill="#ece7d9" font-size="13.5" font-weight="600">Offline-first PWA</text>
+<text class="mono" x="346" y="527" fill="#8fa3bd" font-size="10.5">service worker, IndexedDB</text>
+</g>
+<line x1="334" y1="536" x2="582" y2="536" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.34s">
+<rect x="334" y="543" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="346" y="552" fill="#ece7d9" font-size="13.5" font-weight="600">Barcode &amp; PDF</text>
+<text class="mono" x="346" y="567" fill="#8fa3bd" font-size="10.5">zxing, BarcodeDetector, pdf.js</text>
+</g>
+<line x1="334" y1="576" x2="582" y2="576" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<rect class="scan" style="--h:376px; animation-delay:0.83s" x="334" y="206" width="248" height="18" fill="#4fc3b8" fill-opacity=".10"/>
+<g class="fade" style="animation-delay:0.71s">
+<text class="mono" x="608" y="176" fill="#d9a441" font-size="11.5" letter-spacing="2.5">BACKEND &amp; DATA</text>
+<text class="mono" x="608" y="193" fill="#8fa3bd" font-size="10.5">what holds the state</text>
+</g>
+<rect class="rule" style="transform-origin:608px 0; animation-delay:0.81s" x="608" y="203" width="248" height="1.2" fill="#4fc3b8" fill-opacity=".9"/>
+<line class="trace" x1="608" y1="203.6" x2="856" y2="203.6" stroke="#d9a441" stroke-opacity=".55" stroke-width="1.2"/>
+<g class="fade" style="animation-delay:0.96s">
+<rect x="608" y="223" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="620" y="232" fill="#ece7d9" font-size="13.5" font-weight="600">Node.js · Express</text>
+<text class="mono" x="620" y="247" fill="#8fa3bd" font-size="10.5">REST APIs</text>
+</g>
+<line x1="608" y1="256" x2="856" y2="256" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.03s">
+<rect x="608" y="263" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="620" y="272" fill="#ece7d9" font-size="13.5" font-weight="600">ASP.NET Core 9</text>
+<text class="mono" x="620" y="287" fill="#8fa3bd" font-size="10.5">C#, EF Core, Identity</text>
+</g>
+<line x1="608" y1="296" x2="856" y2="296" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.10s">
+<rect x="608" y="303" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="620" y="312" fill="#ece7d9" font-size="13.5" font-weight="600">Flask</text>
+<text class="mono" x="620" y="327" fill="#8fa3bd" font-size="10.5">Python</text>
+</g>
+<line x1="608" y1="336" x2="856" y2="336" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.17s">
+<rect x="608" y="343" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="620" y="352" fill="#ece7d9" font-size="13.5" font-weight="600">PostgreSQL</text>
+<text class="mono" x="620" y="367" fill="#8fa3bd" font-size="10.5">migrations, row locks</text>
+</g>
+<line x1="608" y1="376" x2="856" y2="376" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.24s">
+<rect x="608" y="383" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="620" y="392" fill="#ece7d9" font-size="13.5" font-weight="600">Prisma · Drizzle</text>
+<text class="mono" x="620" y="407" fill="#8fa3bd" font-size="10.5">typed ORMs</text>
+</g>
+<line x1="608" y1="416" x2="856" y2="416" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.31s">
+<rect x="608" y="423" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="620" y="432" fill="#ece7d9" font-size="13.5" font-weight="600">Supabase</text>
+<text class="mono" x="620" y="447" fill="#8fa3bd" font-size="10.5">auth, realtime</text>
+</g>
+<line x1="608" y1="456" x2="856" y2="456" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.38s">
+<rect x="608" y="463" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="620" y="472" fill="#ece7d9" font-size="13.5" font-weight="600">SQLite · Redis</text>
+<text class="mono" x="620" y="487" fill="#8fa3bd" font-size="10.5">WAL mode, session cache</text>
+</g>
+<line x1="608" y1="496" x2="856" y2="496" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.45s">
+<rect x="608" y="503" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="620" y="512" fill="#ece7d9" font-size="13.5" font-weight="600">Auth hardening</text>
+<text class="mono" x="620" y="527" fill="#8fa3bd" font-size="10.5">sessions, CSRF, TOTP 2FA</text>
+</g>
+<line x1="608" y1="536" x2="856" y2="536" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.52s">
+<rect x="608" y="543" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="620" y="552" fill="#ece7d9" font-size="13.5" font-weight="600">RBAC · audit logs</text>
+<text class="mono" x="620" y="567" fill="#8fa3bd" font-size="10.5">multi-tenant isolation</text>
+</g>
+<line x1="608" y1="576" x2="856" y2="576" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<rect class="scan" style="--h:376px; animation-delay:1.01s" x="608" y="206" width="248" height="18" fill="#4fc3b8" fill-opacity=".10"/>
+<g class="fade" style="animation-delay:0.89s">
+<text class="mono" x="882" y="176" fill="#d9a441" font-size="11.5" letter-spacing="2.5">INFRA, DELIVERY &amp; AI</text>
+<text class="mono" x="882" y="193" fill="#8fa3bd" font-size="10.5">how it ships</text>
+</g>
+<rect class="rule" style="transform-origin:882px 0; animation-delay:0.99s" x="882" y="203" width="248" height="1.2" fill="#4fc3b8" fill-opacity=".9"/>
+<line class="trace" x1="882" y1="203.6" x2="1130" y2="203.6" stroke="#d9a441" stroke-opacity=".55" stroke-width="1.2"/>
+<g class="fade" style="animation-delay:1.14s">
+<rect x="882" y="223" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="894" y="232" fill="#ece7d9" font-size="13.5" font-weight="600">Docker · Compose</text>
+<text class="mono" x="894" y="247" fill="#8fa3bd" font-size="10.5">images from scratch</text>
+</g>
+<line x1="882" y1="256" x2="1130" y2="256" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.21s">
+<rect x="882" y="263" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="894" y="272" fill="#ece7d9" font-size="13.5" font-weight="600">NGINX</text>
+<text class="mono" x="894" y="287" fill="#8fa3bd" font-size="10.5">TLS, reverse proxy, FastCGI</text>
+</g>
+<line x1="882" y1="296" x2="1130" y2="296" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.28s">
+<rect x="882" y="303" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="894" y="312" fill="#ece7d9" font-size="13.5" font-weight="600">MariaDB · WordPress</text>
+</g>
+<line x1="882" y1="336" x2="1130" y2="336" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.35s">
+<rect x="882" y="343" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="894" y="352" fill="#ece7d9" font-size="13.5" font-weight="600">MinIO / S3</text>
+<text class="mono" x="894" y="367" fill="#8fa3bd" font-size="10.5">object storage</text>
+</g>
+<line x1="882" y1="376" x2="1130" y2="376" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.42s">
+<rect x="882" y="383" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="894" y="392" fill="#ece7d9" font-size="13.5" font-weight="600">GitHub Actions</text>
+<text class="mono" x="894" y="407" fill="#8fa3bd" font-size="10.5">CI, GHCR, Gitleaks, Trivy</text>
+</g>
+<line x1="882" y1="416" x2="1130" y2="416" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.49s">
+<rect x="882" y="423" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="894" y="432" fill="#ece7d9" font-size="13.5" font-weight="600">Playwright · Puppeteer</text>
+<text class="mono" x="894" y="447" fill="#8fa3bd" font-size="10.5">E2E, axe a11y</text>
+</g>
+<line x1="882" y1="456" x2="1130" y2="456" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.56s">
+<rect x="882" y="463" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="894" y="472" fill="#ece7d9" font-size="13.5" font-weight="600">Vitest · xunit</text>
+<text class="mono" x="894" y="487" fill="#8fa3bd" font-size="10.5">node:test</text>
+</g>
+<line x1="882" y1="496" x2="1130" y2="496" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.63s">
+<rect x="882" y="503" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="894" y="512" fill="#ece7d9" font-size="13.5" font-weight="600">LLM APIs</text>
+<text class="mono" x="894" y="527" fill="#8fa3bd" font-size="10.5">OpenAI, Anthropic, OpenRouter</text>
+</g>
+<line x1="882" y1="536" x2="1130" y2="536" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<g class="fade" style="animation-delay:1.70s">
+<rect x="882" y="543" width="3" height="10" fill="#d9a441" fill-opacity=".9"/>
+<text class="mono" x="894" y="552" fill="#ece7d9" font-size="13.5" font-weight="600">Linux · Bash</text>
+</g>
+<line x1="882" y1="576" x2="1130" y2="576" stroke="#7aa0cf" stroke-opacity=".18" stroke-width="1"/>
+<rect class="scan" style="--h:376px; animation-delay:1.19s" x="882" y="206" width="248" height="18" fill="#4fc3b8" fill-opacity=".10"/>
+</g></svg>
